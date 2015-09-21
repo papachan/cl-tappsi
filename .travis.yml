@@ -1,15 +1,16 @@
 language: common-lisp
+sudo: required
 
 env:
   matrix:
-    - LISP=sbcl
+    - LISP=sbcl COVERALLS=true
 
 install:
   # Install cl-travis
   - curl https://raw.githubusercontent.com/luismbo/cl-travis/master/install.sh | bash
 
 script:
-  - cl -l fiveam
+  - cl -l fiveam -l 
        -e '(setf fiveam:*debug-on-error* t
                  fiveam:*debug-on-failure* t)'
        -e '(setf *debugger-hook*
