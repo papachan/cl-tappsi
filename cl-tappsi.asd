@@ -1,6 +1,5 @@
 (defsystem cl-tappsi
   :author "papachan <papachan@gmail.com>"
-  :maintainer "papachan <papachan@gmail.com>"
   :license ""
   :version "0.1"
   :homepage "https://github.com/papachan/cl-tappsi"
